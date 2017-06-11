@@ -96,7 +96,7 @@ test('saveUser', async t => {
     username: user.username,
     name: user.name,
     email: 'user@platigram.test',
-    password: 'p4tzi'
+    password: 'pl4tzi'
   }
   nock(options.endpoints.users)
     .post('/', newUser)
@@ -128,4 +128,3 @@ test('auth', async t => {
   let result = await client.auth(credentials.username, credentials.password)
   t.deepEqual(result, token)
 })
-
